@@ -1,0 +1,15 @@
+{
+  "name": "vFrame.UnityComponents",
+  "references": [
+    "vFrame.Core",
+    "vFrame.Core.Unity"
+  ],
+  "optionalUnityReferences": [],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": []
+}
