@@ -4,6 +4,7 @@ using UnityEngine;
 namespace vFrame.UnityComponents
 {
     [RequireComponent(typeof(TrailRenderer))]
+    [DisallowMultipleComponent]
     public class TrailRendererEx : MonoBehaviour
     {
         [SerializeField]

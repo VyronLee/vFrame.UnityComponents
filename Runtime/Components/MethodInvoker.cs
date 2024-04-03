@@ -5,18 +5,15 @@ using UnityEngine;
 
 namespace vFrame.UnityComponents
 {
+    [DisallowMultipleComponent]
     public class MethodInvoker : MonoBehaviour
     {
         [SerializeField]
-        private float timeScale = 1;
+        private float _timeScale = 1;
 
         public float TimeScale {
-            get => timeScale;
-            set => timeScale = value;
-        }
-
-        private void Awake() {
-            hideFlags = HideFlags.DontSave | HideFlags.HideInInspector | HideFlags.NotEditable;
+            get => _timeScale;
+            set => _timeScale = value;
         }
 
         private void OnDisable() {
@@ -118,8 +115,7 @@ namespace vFrame.UnityComponents
             action.Invoke(param);
         }
 
-        private IEnumerator<float>
-            InternalDelayInvoke<T1, T2>(float time, Action<T1, T2> action, T1 param1, T2 param2) {
+        private IEnumerator<float> InternalDelayInvoke<T1, T2>(float time, Action<T1, T2> action, T1 param1, T2 param2) {
             while (time > 0) {
                 yield return time -= Time.deltaTime * TimeScale;
             }

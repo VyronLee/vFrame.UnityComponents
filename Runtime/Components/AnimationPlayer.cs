@@ -19,7 +19,7 @@ namespace vFrame.UnityComponents
 {
     [RequireComponent(typeof(Animation))]
     [DisallowMultipleComponent]
-    public class AnimationList : MonoBehaviour
+    public class AnimationPlayer : MonoBehaviour
     {
         [SerializeField]
         private List<AnimationSet> _animations;
@@ -72,6 +72,21 @@ namespace vFrame.UnityComponents
             var clip = GetAnimation(animationName);
             if (clip) {
                 yield return _animation.PlayUntilFinished(clip.name);
+            }
+        }
+
+        /// <summary>
+        /// 播放指定名称动画片段到末尾
+        /// </summary>
+        /// <param name="animationName"></param>
+        public void ForwardToEnd(string animationName) {
+            var clip = GetAnimation(animationName);
+            if (clip) {
+                _animation.clip = clip;
+                _animation.Play();
+                _animation[clip.name].normalizedTime = 1f;
+                _animation.Sample();
+                _animation.Stop();
             }
         }
 
