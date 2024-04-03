@@ -4,8 +4,6 @@
 
 This library mainly provides a series of components inherited from Unity MonoBehaviour, serving as supplements to the official components.
 
-[English Version (Powered by ChatGPT)](./README_en.md)
-
 ## Table of Contents
 
 * [AnimationPlayer](#animationplayer)
