@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace vFrame.UnityComponents
 {
-    [CustomEditor(typeof(AnimationList))]
-    public class AnimationListInspector : Editor
+    [CustomEditor(typeof(AnimationPlayer))]
+    public class AnimationPlayerInspector : Editor
     {
         private SerializedProperty _animations;
         private bool _listVisibility = true;
@@ -15,6 +15,11 @@ namespace vFrame.UnityComponents
 
         public override void OnInspectorGUI() {
             serializedObject.Update();
+
+            var player = target as AnimationPlayer;
+            if (!player) {
+                return;
+            }
 
             var countInput = EditorGUILayout.TextField("Animation Count", _animations.arraySize.ToString());
             _animations.arraySize = int.Parse(countInput);
@@ -40,10 +45,8 @@ namespace vFrame.UnityComponents
                     var prevEnabled = GUI.enabled;
                     GUI.enabled = Application.isPlaying;
                     if (GUILayout.Button("Play", GUILayout.Width(50f))) {
-                        var animationList = target as AnimationList;
-                        if (animationList) animationList.Play(name.stringValue);
+                        player.Play(name.stringValue);
                     }
-
                     GUI.enabled = prevEnabled;
 
                     EditorGUILayout.EndHorizontal();

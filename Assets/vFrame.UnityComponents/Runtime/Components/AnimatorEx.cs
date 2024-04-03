@@ -3,6 +3,7 @@
 namespace vFrame.UnityComponents
 {
     [RequireComponent(typeof(Animator))]
+    [DisallowMultipleComponent]
     public class AnimatorEx : MonoBehaviour
     {
         [SerializeField]

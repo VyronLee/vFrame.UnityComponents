@@ -3,7 +3,5 @@
 namespace vFrame.UnityComponents
 {
     [CustomEditor(typeof(TransformSnapshot))]
-    public class TransformSnapshotInspector : GameObjectSnapshotInspector
-    {
-    }
+    public class TransformSnapshotInspector : GameObjectSnapshotInspector { }
 }

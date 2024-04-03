@@ -3,7 +3,5 @@
 namespace vFrame.UnityComponents
 {
     [CustomEditor(typeof(RendererEnableStateSnapshot))]
-    public class RendererEnableStateSnapshotInspector : GameObjectSnapshotInspector
-    {
-    }
+    public class RendererEnableStateSnapshotInspector : GameObjectSnapshotInspector { }
 }

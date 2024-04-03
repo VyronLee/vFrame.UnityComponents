@@ -3,7 +3,5 @@
 namespace vFrame.UnityComponents
 {
     [CustomEditor(typeof(ParticleSystemEnableStateSnapshot))]
-    public class ParticleSystemEnableStateSnapshotInspector : GameObjectSnapshotInspector
-    {
-    }
+    public class ParticleSystemEnableStateSnapshotInspector : GameObjectSnapshotInspector { }
 }
