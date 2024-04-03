@@ -69,8 +69,7 @@ namespace vFrame.UnityComponents
         private void TakeInternal(Transform target) {
             var snapshot = target.GetComponent<GameObjectSnapshotBehaviour>();
             if (!snapshot) {
-                snapshot =
-                    AddComponentInternal(target.gameObject, typeof(GameObjectSnapshotBehaviour)) as
+                snapshot = AddComponentInternal(target.gameObject, typeof(GameObjectSnapshotBehaviour)) as
                         GameObjectSnapshotBehaviour;
             }
 

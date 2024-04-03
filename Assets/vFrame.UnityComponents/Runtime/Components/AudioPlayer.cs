@@ -14,6 +14,7 @@ using UnityEngine;
 namespace vFrame.UnityComponents
 {
     [RequireComponent(typeof(AudioSource))]
+    [DisallowMultipleComponent]
     public class AudioPlayer : MonoBehaviour
     {
         private bool _isDirty;
