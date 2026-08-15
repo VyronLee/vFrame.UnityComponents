@@ -1,4 +1,4 @@
-﻿//------------------------------------------------------------
+//------------------------------------------------------------
 //        File:  AnimationList.cs
 //       Brief:  动画列表，用于设定一系列动画名称以及其对应的动画片段
 //               方便代码中根据名称直接播放对应动画
@@ -13,7 +13,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using vFrame.Core.Unity.Extensions;
+using vFrame.Core.Unity;
 
 namespace vFrame.UnityComponents
 {
